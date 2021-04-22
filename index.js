@@ -48,6 +48,7 @@ function doCommit(connection) {
 // process.on('SIGINT', () => process.exit(1));
 
 // ======================ROUTE======================== //
+
 app.get('/CheckUserRights/:empid', async function (req, res) {
     var EmpID = parseInt(req.params.empid)
 
@@ -225,7 +226,7 @@ app.get('/GetOrderNumber/:shipno/:docno', async function (req, res) {
 
 
 app.post('/InsertUserRights', async function (req, res) {
-    
+
     try {
         await oracledb.getConnection({
             user: dbconfig.user,
