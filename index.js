@@ -48,7 +48,10 @@ function doCommit(connection) {
 // process.on('SIGINT', () => process.exit(1));
 // ======================ROUTE======================== //
 app.get('/', function (req, res) {
-    res.send("hello hiroku")
+    res.send({
+        results: "true",
+        message: "welcome to heroku"
+    })
 })
 
 app.get('/CheckUserRights/:empid', async function (req, res) {
