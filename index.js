@@ -1,4 +1,10 @@
 const oracledb = require('oracledb');
+try {
+    oracledb.initOracleClient({ libDir: 'C:\\instantclient_19_10' });
+} catch (err) {
+    console.error('Whoops!', err);
+    process.exit(1);
+}
 const dbconfig = require('./dbconfig');
 // oracledb.outFormat = oracledb.ARRAY;
 
