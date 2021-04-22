@@ -46,8 +46,12 @@ function doCommit(connection) {
 
 // console.log('Try to press CTRL+C or SIGNAL the process with PID: ', process.pid);
 // process.on('SIGINT', () => process.exit(1));
-
+let count = 0
 // ======================ROUTE======================== //
+app.get('/', function (req, res) {
+    conunt++
+    res.end(count)
+})
 
 app.get('/CheckUserRights/:empid', async function (req, res) {
     var EmpID = parseInt(req.params.empid)
