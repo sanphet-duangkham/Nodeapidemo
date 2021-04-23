@@ -67,7 +67,7 @@ app.get('/CheckUserRights/:empid', async function (req, res) {
                 if (err) {
                     console.error(err.message);
                     return res.status(400).json({
-                        message_error: err.message
+                        message_error: "70" + err.message
                     });
                 }
 
@@ -83,7 +83,7 @@ app.get('/CheckUserRights/:empid', async function (req, res) {
                         if (err) {
                             console.error(err.message);
                             return res.status(400).json({
-                                message_error: err.message
+                                message_error: "86" + err.message
                             });
                         }
 
